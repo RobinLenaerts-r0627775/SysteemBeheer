@@ -1,6 +1,12 @@
 //
 // Do any local configuration here
 //
+zone "robin-lenaerts1.sb.uclllabs.be" {
+	type master;
+	file "/etc/bind/zones/ns.robin-lenaerts1.sb.uclllabs.be.db";
+	allow-query{	any;	};
+	notify yes;
+};	
 
 // Consider adding the 1918 zones here, if they are not used in your
 // organization
