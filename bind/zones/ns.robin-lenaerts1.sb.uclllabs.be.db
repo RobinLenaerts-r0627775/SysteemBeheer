@@ -1,7 +1,7 @@
 $TTL 3600;
 @                      3600 SOA   ns.robin-lenaerts1.sb.uclllabs.be. root.robin-lenaerts1.sb.uclllabs.be. (
 			      
-                              3  	               ; serial number
+                              4  	                 ; serial number
                               3600                       ; refresh period
                               600                        ; retry period
                               604800                     ; expire time
@@ -14,3 +14,6 @@ ns	IN	A	193.191.177.179
 test	IN	A	193.191.177.254
 @	IN	A	193.191.177.179
 www	IN	A	193.191.177.179
+www1	IN	A	193.191.177.179
+www2	IN	A	193.191.177.179
+
