@@ -1,0 +1,6 @@
+#!bin/bash/
+
+INPUT=$1
+SUBZONE=$(echo $INPUT| cut -d'.' -f 1)
+echo "$SUBZONE	IN	A	193.191.177.179" >> /etc/bind/zones/ns.robin-lenaerts1.sb.uclllabs.be.db
+

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ "$1" = "-t" ]
+then
+        echo "$3        IN      $2      $4" >> /etc/bind/zones/$5
+#replacing the serial
+        sed -i '5 d' /etc/bind/zones/$5
+        sed -i  "5 i \ \t\t\t `date '+%m%d%H%M%S'`  ;Serial"" /etc/bind/zones/$5
+else
+         echo "$1        IN      A      $2" >> /etc/bind/zones/$5
+#replacing the serial
+        sed -i '5 d' /etc/bind/zones/$5
+        sed -i  "5 i \ \t\t\t `date '+%m%d%H%M%S'`  ;Serial"" /etc/bind/zones/$5
+fi
+systemctl restart bind9
