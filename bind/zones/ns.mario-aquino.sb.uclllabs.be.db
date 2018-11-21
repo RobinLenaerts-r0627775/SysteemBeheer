@@ -1,0 +1,11 @@
+$TTL 3600;
+@                      3600 SOA   ns.mario-aquino.sb.uclllabs.be. root.mario-aquino.sb.uclllabs.be. (
+			      
+                              8		                 ; serial number
+                              3600                       ; refresh period
+                              600                        ; retry period
+                              604800                     ; expire time
+                              1800                     ) ; minimum ttl
+;
+@	IN	NS	ns
+@	IN	A	193.191.177.167

@@ -5,9 +5,15 @@ zone "robin-lenaerts1.sb.uclllabs.be" {
 	type master;
 	file "/etc/bind/zones/ns.robin-lenaerts1.sb.uclllabs.be.db";
 	allow-query{	any;	};
+	allow-transfer {193.191.177.254; 193.191.177.167;};
 	notify yes;
 };	
 
+zone "mario-aquino.sb.uclllabs.be" {
+	type slave;
+	masters {193.191.177.167;};
+	file "/etc/bind/zones/ns.mario-aquino.sb.uclllabs.be.db";
+}
 // Consider adding the 1918 zones here, if they are not used in your
 // organization
 //include "/etc/bind/zones.rfc1918";
