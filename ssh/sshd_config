@@ -13,8 +13,8 @@
 Port 22
 Port 22345
 #AddressFamily any
-#ListenAddress 0.0.0.0
-#ListenAddress ::
+ListenAddress 0.0.0.0
+ListenAddress ::
 
 #HostKey /etc/ssh/ssh_host_rsa_key
 #HostKey /etc/ssh/ssh_host_ecdsa_key
@@ -123,5 +123,7 @@ Subsystem	sftp	/usr/lib/openssh/sftp-server
 #	PermitTTY no
 #	ForceCommand cvs server
 Port 22345
+ListenAddress ::
+ListenAddress 0.0.0.0
 PermitRootLogin no
 AllowUsers check root
